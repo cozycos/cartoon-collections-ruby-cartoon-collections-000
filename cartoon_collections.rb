@@ -16,6 +16,8 @@ end
 
 def find_the_cheese(snacks)
    cheese = ["cheddar", "gouda", "camembert"]
-"cheddar"
-nil
+    snacks.collect do |snack| 
+      cheese.include(snack) 
+    end
+    nil
 end

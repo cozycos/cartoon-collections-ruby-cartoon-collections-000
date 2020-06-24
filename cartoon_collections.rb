@@ -15,9 +15,11 @@ calls.any? {|word|word.length>4}
 end
 
 def find_the_cheese(snacks)
-   cheese = ["cheddar", "gouda", "camembert"]
+    cheese = ["cheddar", "gouda", "camembert"]
     snacks.collect do |snack| 
-      cheese.include(snack) 
+      if cheese.include(snack) 
+        return  snack        
+      end  
     end
     nil
 end
